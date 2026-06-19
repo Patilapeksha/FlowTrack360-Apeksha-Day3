@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Registration Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(to right,#ff3300,#ff9900);
+}
+
+.container{
+    background:#fff;
+    padding:30px;
+    border-radius:8px;
+    width:90%;
+    max-width:700px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+.form-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:5px;
+}
+
+input{
+    padding:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    color:white;
+    background:linear-gradient(to right,#ff3300,#ff9900);
+    cursor:pointer;
+    font-size:16px;
+}
+
+@media(max-width:600px){
+    .form-group{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration</h2>
+
+    <form>
+        <div class="form-group">
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" placeholder="Enter username" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" placeholder="Enter email" required>
+            </div>
+
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter phone number" required>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" required>
+            </div>
+
+            <div class="input-box">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Enter confirm password" required>
+            </div>
+
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
